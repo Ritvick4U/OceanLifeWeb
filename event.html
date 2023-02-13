@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ocean Life</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="container" x-data="{ rightSide: false, leftSide: false }">
+    <div class="left-side" :class="{'active' : leftSide}">
+      <div class="left-side-button" @click="leftSide = !leftSide">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+          viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+      </div>
+      <br>
+      <div class="logo">Ocean Life</div>
+      <br>
+      <div class="side-tagline">Protecting Our Oceans, One Voice at a Time</div>
+      <div class="side-wrapper">
+        <div class="side-title">MENU</div>
+        <div class="side-menu">
+          <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <path d="M9 22V12h6v10" />
+            </svg>
+            Home
+          </a>
+          <a href="event.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            Events
+          </a>
+          <a href="photos.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16"> <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/> <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/> </svg>
+            Photos
+          </a>
+          <a href="https://github.com/nodeDevcoder/underwater-plastic-collector" target="_blank">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 30L19 33C19 36.866 15.866 40 12 40V40C8.13401 40 5 36.866 5 33L5 19" stroke="currentColor"
+                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M29 30L29 33C29 36.866 32.134 40 36 40V40C39.866 40 43 36.866 43 33L43 19" stroke="currentColor"
+                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="5" y="8" width="38" height="22" rx="11" fill="none" stroke="currentColor" stroke-width="3" />
+              <path d="M21 19H13" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M17 15V23" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="32" y="15" width="4" height="4" rx="2" fill="none" />
+              <rect x="28" y="20" width="4" height="4" rx="2" fill="none" />
+            </svg>
+            </svg>
+            Interactive Game
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="main">
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+        <button class="right-side-button" @click="rightSide = !rightSide">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="main-container">
+        <div class="profile">
+          <div class="profile-avatar">
+            <img src="Images/profilepic.jpg" alt="" class="profile-img">
+            <div class="profile-name">Sample User 1</div>
+          </div>
+          <img src="Images/oceanimg.jpg" alt="" class="profile-cover">
+          <div class="profile-menu">
+            <a class="profile-menu-link" href="index.html">Home</a>
+            <a class="profile-menu-link active" href="event.html">Events</a>
+            <a class="profile-menu-link" href="photos.html">Photos</a>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-left">
+
+            <div class="pages box">
+              <div class="intro-title">
+                Your Friends
+                <button class="intro-menu"></button>
+              </div>
+              <div class="user">
+                <img src="Images/profilepic2.jpg" alt="" class="user-img">
+                <div class="username">Sample User 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-middle">
+
+            <body>
+              <a target="_blank" href="https://www.oceandefenders.org/events/calendar.html">
+                <div class="container">
+                  <div class="calendar">
+                    <div class="month">
+                      <i class="fas fa-angle-left prev"></i>
+                      <div class="date">
+                        <h1></h1>
+                        <p></p>
+                      </div>
+                      <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                      <div>Sun</div>
+                      <div>Mon</div>
+                      <div>Tue</div>
+                      <div>Wed</div>
+                      <div>Thu</div>
+                      <div>Fri</div>
+                      <div>Sat</div>
+                    </div>
+                    <div class="days"></div>
+                  </div>
+                </div>
+              </a>
+
+              <script src="script.js"></script>
+            </body>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right-side" :class="{ 'active': rightSide }">
+      <div class="account">
+        <button class="account-button">
+          <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            class="css-i6dzq1" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <path d="M22 6l-10 7L2 6" />
+          </svg>
+        </button>
+        <button class="account-button">
+          <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            class="css-i6dzq1" viewBox="0 0 24 24">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
+          </svg>
+        </button>
+        <span class="account-user">Sample User 1
+          <img src="Images/profilepic.jpg" alt=""
+            class="account-profile" alt="">
+          <span>▼</span>
+        </span>
+      </div>
+      <div class="side-wrapper stories">
+        <div class="side-title">STORIES</div>
+        <div class="user">
+          <img src="Images/profilepic2.jpg" alt="" class="user-img">
+          <div class="username">Sample User 2
+            <div class="album-date">12 hours ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="side-wrapper contacts">
+        <div class="side-title">CONTACTS</div>
+        <div class="user">
+          <img src="/Images/profilepic2.jpg" class="user-img">
+          <div class="username">Sample User 2
+            <div class="user-status"></div>
+          </div>
+        </div>
+      </div>
+      <div class="search-bar right-search">
+        <input type="text" placeholder="Search" />
+        <div class="search-bar-svgs">
+          <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            class="css-i6dzq1" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+          </svg>
+          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.34 469.34">
+            <path
+              d="M456.84 76.17l-64-64.06c-16.13-16.13-44.18-16.17-60.37.04L45.77 301.67a10.73 10.73 0 00-2.7 4.59L.41 455.73a10.68 10.68 0 0013.19 13.2l149.33-42.7c1.73-.5 3.3-1.42 4.58-2.7l289.33-286.98c8.06-8.07 12.5-18.78 12.5-30.19s-4.44-22.12-12.5-30.2zM285.99 89.74L325.25 129l-205 205-14.7-29.44a10.67 10.67 0 00-9.55-5.9H78.92L286 89.75zM26.2 443.14l13.9-48.64 34.74 34.74-48.64 13.9zm123.14-35.18L98.3 422.54l-51.5-51.5L61.38 320H89.4l18.38 36.77a10.67 10.67 0 004.77 4.77l36.78 18.39v28.03zm21.33-17.54v-17.09c0-4.04-2.28-7.72-5.9-9.54l-29.43-14.7 205-205 39.26 39.26-208.93 207.07zm271.11-268.7l-47.03 46.61L301 74.6l46.59-47c8.06-8.07 22.1-8.07 30.16 0l64 64c4.03 4.03 6.25 9.38 6.25 15.08s-2.22 11.05-6.22 15.05z" />
+          </svg>
+          <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }">
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.4/dist/alpine.js'></script>
+</body>
+
+</html>
